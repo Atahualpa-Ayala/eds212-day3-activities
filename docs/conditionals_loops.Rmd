@@ -1,0 +1,76 @@
+---
+title: "conditionals loops"
+author: "Atahualpa Ayala"
+date: '2022-08-10'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+### TASK 1 - Conditional statements & for loops
+
+```{r}
+pm2_5 < 151
+
+if (pm2_5 < 100) {
+  print ("Low to moderate risk")
+  } else if (pm2_5 <= 100 & pm2_5 < 150){
+  print("Unhealthy for sensitive groups")
+  } else if (pm2_5 >= 150){
+    print("Health risk present")
+  }
+
+```
+### TASK 2 
+```{r}
+species <- "blue_whale"
+
+if (str_detect(species, pattern = "blue_whale")){
+  print ("You found a whale!")
+}
+
+```
+### TASK 3
+```{r}
+max_airtemp_c <-c(2.1)
+
+if (max_airtemp_c > 27) { 
+  print ("Temperature too high")
+} else if (max_airtemp_c < 27){
+  print ("Temperature OK")
+}
+
+```
+### TASK 4 
+
+```{r}
+base_burrito <- 6.5
+
+order <-  "steak"
+
+if (str_detect(order, pattern = "veggie")){
+  burrito_value <- base_burrito
+} else if ( str_detect(order, pattern = "chicken")){
+  burrito_value <- base_burrito + 3
+} else if ( str_detect(order, pattern = "steak")){
+  burrito_value <- base_burrito + 3.25
+}
+
+print (burrito_value)
+
+```
+### TASK 5 
+```{r}
+
+```
+
+
+
+
+
+
+
+
